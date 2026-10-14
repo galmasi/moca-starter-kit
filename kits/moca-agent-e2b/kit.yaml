@@ -1,6 +1,6 @@
 schemaVersion: v1
 id: moca-agent
-name: Moca remote sandbox agent v0.2
+name: Moca E2B sandbox agent v0.2
 description: >-
   Claude Code agent running on a custom container image using a remote sandbox
 category: software

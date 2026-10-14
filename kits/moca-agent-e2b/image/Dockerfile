@@ -4,10 +4,10 @@ USER root
 
 # install the E2B basics
 RUN apt-get update
-RUN apt-get install iputils-ping python3-pip -y
+RUN apt-get install iputils-ping python3-pip proxychains4 -y
 RUN npm i -g @e2b/cli
 RUN pip3 install e2b -U --break-system-packages
-
+RUN pip3 install httpx[socks] -U --break-system-packages
 
 # custom harness terminal
 COPY harness-terminal.sh /usr/local/bin/harness-terminal
