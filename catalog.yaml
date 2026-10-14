@@ -1,6 +1,2 @@
 kits:
-  - url: https://github.com/dam-agents/code-guardian
-  - url: https://github.com/dam-agents/llm-wiki-v2
-  - url: https://github.com/dam-agents/personal-assistant
-  - url: https://github.com/dam-agents/plain-wiki
   - path: kits/moca-agent
