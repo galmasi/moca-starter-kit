@@ -6,16 +6,19 @@ description: >-
 category: software
 icon: wrench
 image:
-  ref: ghcr.io/galmasi/moca-claude-agent:0.2
+  ref: ghcr.io/galmasi/moca-claude-agent:0.3
   harness: claude-code
-  providers: [anthropic]
+  providers: [anthropic, curve-bender, ibm-litellm]
 resources:
   cpu: "2"
   memory: 4Gi
   storage: 5Gi
+
 connections:
-  - accepts: [anthropic]
-    note: Anthropic API key for Claude.
+  - accepts: [anthropic, curve-bender]
+  - accepts: [custom-header]
+    note: API token for e2btest2
+  
 egressPreset: trusted
 egressRules:
   - host: "*.e2btest2.ete14.res.ibm.com"
@@ -24,3 +27,9 @@ egressRules:
   - host: 9.2.130.16
     port: 443
     verdict: allow
+
+seed:
+  self: true
+
+bundledSkills:
+  path: .agents/skills
