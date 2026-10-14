@@ -1,12 +1,12 @@
 schemaVersion: v1
 id: moca-agent
-name: Moca remote sandbox agent
+name: Moca remote sandbox agent v0.2
 description: >-
   Claude Code agent running on a custom container image using a remote sandbox
 category: software
 icon: wrench
 image:
-  ref: ghcr.io/galmasi/my-agent:0.1
+  ref: ghcr.io/galmasi/moca-claude-agent:0.2
   harness: claude-code
   providers: [anthropic]
 resources:
@@ -19,5 +19,8 @@ connections:
 egressPreset: trusted
 egressRules:
   - host: "*.e2btest2.ete14.res.ibm.com"
+    port: 443
+    verdict: allow
+  - host: 9.2.130.16
     port: 443
     verdict: allow
