@@ -1,17 +1,6 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/dam-agents/dam-starter-kits/main/catalog.schema.json
-# The kits this catalog offers. An entry either names a directory here holding
-# a kit.yaml, or names another repository that carries its own.
-#
-# A repository is named the same way everywhere the platform names one: a plain
-# `url`, and `ref` when you want a particular branch, tag or commit. A version
-# is never written into the URL — a URL carrying one is refused rather than
-# read at the default branch.
-#
-# An entry with no `ref` is pinned to a commit by the platform each time it
-# refreshes, so a kit always resolves to exact contents even though this file
-# moves.
 kits:
   - url: https://github.com/dam-agents/code-guardian
   - url: https://github.com/dam-agents/llm-wiki-v2
   - url: https://github.com/dam-agents/personal-assistant
   - url: https://github.com/dam-agents/plain-wiki
+  - path: kits/moca-agent

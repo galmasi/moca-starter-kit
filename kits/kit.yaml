@@ -1,0 +1,23 @@
+schemaVersion: v1
+  id: moca-agent
+  name: Moca remote sandbox agent
+  description: >-
+    Claude Code agent running on a custom container image using a remote sandbox
+  category: software
+  icon: wrench
+  image:
+    ref: ghcr.io/galmasi/my-agent:0.1
+    harness: claude-code
+    providers: [anthropic]
+  resources:
+    cpu: "2"
+    memory: 4Gi
+    storage: 5Gi
+  connections:
+    - accepts: [anthropic]
+      note: Anthropic API key for Claude.
+  egressPreset: trusted
+  egressRules:
+    - host: "*.e2btest2.ete14.res.ibm.com"
+      port: 443
+      verdict: allow
