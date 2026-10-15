@@ -1,12 +1,12 @@
 schemaVersion: v1
 id: moca-agent
-name: Moca E2B sandbox agent v0.3
+name: Moca E2B sandbox agent v0.31
 description: >-
   Claude Code agent running on a custom container image using a remote sandbox
 category: software
 icon: wrench
 image:
-  ref: ghcr.io/galmasi/moca-claude-agent:0.31
+  ref: ghcr.io/galmasi/moca-claude-agent:0.3
   harness: claude-code
   providers: [anthropic, curve-bender, ibm-litellm]
 resources:
