@@ -6,7 +6,7 @@ description: >-
 category: software
 icon: wrench
 image:
-  ref: ghcr.io/galmasi/moca-claude-agent:0.3
+  ref: ghcr.io/galmasi/moca-claude-agent:0.31
   harness: claude-code
   providers: [anthropic, curve-bender, ibm-litellm]
 resources:
@@ -16,8 +16,6 @@ resources:
 
 connections:
   - accepts: [anthropic, curve-bender]
-  - accepts: [custom-header]
-    note: API token for e2btest2
   
 egressPreset: trusted
 egressRules:
@@ -31,5 +29,5 @@ egressRules:
 seed:
   self: true
 
-bundledSkills:
-  path: .agents/skills
+#bundledSkills:
+#  path: .agents/skills
